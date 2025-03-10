@@ -1,35 +1,35 @@
-# Exercice authentification
+# Exercice Tests
 
-![Bannière](https://w0.peakpx.com/wallpaper/416/836/HD-wallpaper-blue-abstract-background-blue-geometric-abstraction-blue-rectangles-background-abstract-background.jpg)
+![Bannière](https://assets-global.website-files.com/5eb9845c0972c01cdaec8415/623246fc4643e4ed0589e1d2_what-is-qa-testing2.jpg)
 
 Ce dépôt contient une base de travail sur la branche main, puis l'avancée petit à petit sur les branches suivantes.
 
 ## <div style="background-color: #154275; padding: 10px; color: white;">Branches</div>
 
-- **1-register** ⇒ <link>https://github.com/delbaze/jwt-quete-vite/tree/1-register</link>
-- **2-login** ⇒ <link>https://github.com/delbaze/jwt-quete-vite/tree/2-login</link>
-- **3-register-suite** ⇒ <link>https://github.com/delbaze/jwt-quete-vite/tree/3-register-suite</link>
-- **4-books-create** ⇒ <link>https://github.com/delbaze/jwt-quete-vite/tree/4-books-create</link>
 
-<!-- *Branches bonus:
-- **5-passage-infos** ⇒ <link>https://github.com/delbaze/jwt-quete/tree/5-passage-infos</link>
-- **6-mailer** ⇒ <link>https://github.com/delbaze/jwt-quete/tree/6-mailer</link> -->
+- **1-mock-livres** ⇒ <link>https://github.com/delbaze/tests-quete-vite/tree/1-mock-livres</link>
+- **2-store-livres** ⇒ <link>https://github.com/delbaze/tests-quete-vite/tree/2-store-livres</link>
+- **3-db-livres** ⇒ <link>https://github.com/delbaze/tests-quete-vite/tree/3-db-livres</link>
+- **4-front-1** ⇒ <link>https://github.com/delbaze/tests-quete-vite/tree/4-front-1</link>
+- **5-front-2** ⇒ <link>https://github.com/delbaze/tests-quete-vite/tree/5-front-2</link>
+- **6-front-e2e** ⇒ <link>https://github.com/delbaze/tests-quete-vite/tree/6-front-e2e</link>
+
 
 ## <div style="background-color: #154275; padding: 10px; color: white;">Structure du Projet</div>
 
 - **backend/** : Application TypeGraphQL avec Apollo Server
-- **frontend/** : Application Vite
+- **frontend/** : Application Vite.js
 
 ## <div style="background-color: #154275; padding: 10px; color: white;">Technologie Utilisée</div>
 
 - **Backend** : TypeGraphQL, Apollo Server, TypeORM
-- **Frontend** : Vite
+- **Frontend** : Vite.js
 - **Base de Données** : SQLite
 - **Environnement** : Docker via docker-compose.yml à la racine du projet
 
 ## <div style="background-color: #154275; padding: 10px; color: white;">Installation</div>
 
-1. Cloner ce dépôt : `git clone https://github.com/delbaze/jwt-quete-vite`
+1. Cloner ce dépôt : `git clone https://github.com/delbaze/test-quete-vite`
 
 ##### Si vous souhaitez installer les dépendances localement directement plutôt que de mapper vos dossiers node_modules :
 
