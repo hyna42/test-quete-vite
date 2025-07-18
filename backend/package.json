@@ -4,7 +4,7 @@
   "main": "index.ts",
   "scripts": {
     "start": "ts-node-dev --exit-child --watch src --poll src/index.ts",
-    "test": "jest"
+    "test": "jest --watch"
   },
   "license": "MIT",
   "dependencies": {
