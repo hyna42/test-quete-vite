@@ -4,13 +4,16 @@ import BookResolver from "../../src/resolvers/book.resolver"
 import { LIST_BOOKS } from "./query"
 import Book from "../../src/entities/book.entity"
 import datasource from "../../src/lib/datasource"
-
+import { addMocksToSchema } from "@graphql-tools/mock";
 
 /**type  Books */
 const booksData: Book[] = [
     { id: "1", title: "Mon Livre 1" },
     { id: "2", title: "Mon Livre 2" },
 ];
+
+/**Type la réponse du query book() => [] */
+type responseData = { books: Book[] }
 
 /**creer notre serveur Appolo avant tous les tests */
 let server: ApolloServer
@@ -31,9 +34,9 @@ beforeAll(async () => {
     };
 
     server = new ApolloServer({
-        schema: baseSchema
+        schema: addMocksToSchema({ schema: baseSchema, mocks })
     })
-    await datasource.initialize()//initialisation de la datasource
+
 })
 
 afterAll(async () => {
@@ -41,8 +44,7 @@ afterAll(async () => {
 })
 
 
-/**Type la réponse du query book() => [] */
-type responseData = { books: Book[] }
+
 
 
 
@@ -56,4 +58,6 @@ describe('Test sur les livre', () => {
     })
 
 })
+
+
 
