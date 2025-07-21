@@ -3,8 +3,8 @@ import { buildSchemaSync } from "type-graphql"
 import BookResolver from "../../src/resolvers/book.resolver"
 import { LIST_BOOKS } from "./query"
 import Book from "../../src/entities/book.entity"
-import datasource from "../../src/lib/datasource"
 import { addMocksToSchema } from "@graphql-tools/mock";
+import assert from "node:assert"
 
 /**type  Books */
 const booksData: Book[] = [
@@ -48,11 +48,14 @@ describe('Test sur les livre', () => {
 
         console.log('RESPONSE', JSON.stringify(response))
 
-        if (response.body.kind === 'single') {
-            expect(response.body.singleResult.data).toEqual({
-                books: booksData
-            })
-        }
+        // if (response.body.kind === 'single') {
+        //     expect(response.body.singleResult.data).toEqual({
+        //         books: booksData
+        //     })
+        // }
+
+        assert(response.body.kind === 'single');
+        expect(response.body.singleResult.data).toEqual({ books: booksData })
     })
 
 })
