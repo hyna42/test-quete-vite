@@ -39,14 +39,6 @@ beforeAll(async () => {
 
 })
 
-afterAll(async () => {
-    await datasource.destroy()// destruction de l'instance de la datasource une fois que tous les tests sont terminés.
-})
-
-
-
-
-
 
 /** TESTS */
 describe('Test sur les livre', () => {
@@ -55,6 +47,12 @@ describe('Test sur les livre', () => {
         const response = await server.executeOperation<responseData>({ query: LIST_BOOKS })
 
         console.log('RESPONSE', JSON.stringify(response))
+
+        if (response.body.kind === 'single') {
+            expect(response.body.singleResult.data).toEqual({
+                books: booksData
+            })
+        }
     })
 
 })
